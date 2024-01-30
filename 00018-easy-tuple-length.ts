@@ -15,4 +15,4 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type Length<T extends readonly any[]> = T extends { length: infer L } ? L : never
+export type Length<T extends readonly any[]> = T extends { length: infer L } ? L : never
