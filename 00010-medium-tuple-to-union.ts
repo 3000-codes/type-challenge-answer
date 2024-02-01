@@ -8,4 +8,4 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type TupleToUnion<T extends any[]> = T[number]
+export type TupleToUnion<T extends any[]> = T[number]
