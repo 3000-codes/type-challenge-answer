@@ -10,4 +10,5 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type LengthOfString<S extends string> = 
+type String2CharTuple<S extends string> = S extends `${infer F}${infer R}` ? [F, ...String2CharTuple<R>] : []
+type LengthOfString<S extends string> = String2CharTuple<S>['length']
