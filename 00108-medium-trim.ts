@@ -15,5 +15,5 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type TrimRight<S extends string> = S extends `${infer L}${' ' | '\n' | '\t'}` ? TrimRight<L> : S
+export type TrimRight<S extends string> = S extends `${infer L}${' ' | '\n' | '\t'}` ? TrimRight<L> : S
 type Trim<S extends string> = TrimRight<TrimLeft<S>>
